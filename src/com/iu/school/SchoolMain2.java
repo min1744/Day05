@@ -1,6 +1,5 @@
 package com.iu.school;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class SchoolMain2 {
@@ -16,15 +15,24 @@ public class SchoolMain2 {
 		Student [] students = new Student[count];
 		for(int i = 0; i < count; i++) {
 			st = new Student();
-			System.out.print("이름 : ");
+			System.out.print(i + 1 + "번째 학생의 이름 : ");
 			st.name = sc.next();
-			System.out.print("번호 : ");
+			System.out.print(i + 1 + "번째 학생의 번호 : ");
 			st.num = sc.nextInt();
+			System.out.print(i + 1 + "번째 학생의 국어점수 : ");
+			st.kor = sc.nextInt();
+			System.out.print(i + 1 + "번째 학생의 영어점수 : ");
+			st.eng = sc.nextInt();
+			System.out.print(i + 1 + "번째 학생의 수학점수 : ");
+			st.math = sc.nextInt();
 			students[i] = st;
 		}
 		for(int i = 0; i < count; i++) {
-			System.out.println(students[i].name);
-			System.out.println(students[i].num);
+			System.out.println("이름 : " + students[i].name);
+			System.out.print("번호 : " + students[i].num + "\t");
+			System.out.print("국어점수 : " + students[i].kor + "\t");
+			System.out.print("영어점수 : " + students[i].eng + "\t");
+			System.out.println("수학점수 : " + students[i].math);
 		}
 	}
 }
